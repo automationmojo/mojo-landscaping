@@ -1,8 +1,8 @@
 [tool.poetry]
-name = "<package name>"
-description = "<package description>"
+name = "mojo-landscaping"
+description = "Automation Mojo Landscaping Package"
 version = "0.0.1"
-authors = []
+authors = ["Myron W Walker"]
 readme = "README.rst"
 license = "LICENSE.txt"
 classifiers = [
