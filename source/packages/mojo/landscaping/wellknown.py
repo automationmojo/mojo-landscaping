@@ -38,7 +38,7 @@ def LandscapeSingleton() -> "Landscape":
 
         SINGLETON_LOCK.acquire()
         try:
-            from mojo.landscaping.landscapingextfactory import LandscapingExtensionFactory
+            from mojo.landscaping.extensionfactories import LandscapingExtensionFactory
 
             if LANDSCAPE_SINGLETON is None:
                 LandscapeType = super_factory.get_override_types_by_order(
