@@ -21,7 +21,7 @@ from typing import TYPE_CHECKING
 
 from mojo.errors.exceptions import NotOverloadedError
 
-from mojo.landscaping.coupling.integrationcoupling import IntegrationCoupling
+from mojo.xmods.injection.coupling.integrationcoupling import IntegrationCoupling
 
 if TYPE_CHECKING:
     from mojo.landscaping.landscape import Landscape
