@@ -20,10 +20,10 @@ __license__ = "MIT"
 
 from typing import Dict, TYPE_CHECKING
 
-from mojo.xmods.wellknown.singletons import SuperFactorySinglton
+from mojo.extension.wellknown import ConfiguredSuperFactorySingleton
 
 from mojo.landscaping.coupling.integrationcoupling import IntegrationCouplingType
-from mojo.landscaping.extensionpoints import LandscapingExtentionPoints
+from mojo.landscaping.extensionfactories import LandscapingExtensionFactory
 from mojo.landscaping.layers.landscapinglayerbase import LandscapingLayerBase
 
 if TYPE_CHECKING:
@@ -49,9 +49,9 @@ class LandscapeInstallationLayer(LandscapingLayerBase):
 
     def _load_integration_coupling_types(self):
 
-        super_factory = SuperFactorySinglton()
+        super_factory = ConfiguredSuperFactorySingleton()
         for integration_coupling_types in super_factory.interate_override_types_for_each(
-            LandscapingExtentionPoints.get_integration_coupling_types):
+            LandscapingExtensionFactory.get_integration_coupling_types):
 
             for itype in integration_coupling_types:
                 itype: IntegrationCouplingType = itype

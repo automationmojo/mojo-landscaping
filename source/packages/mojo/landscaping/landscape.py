@@ -435,7 +435,7 @@ def startup_landscape(activation_params: LandscapeActivationParams=DEFAULT_LANDS
         Statup the landscape outside of a testrun.
     """
 
-    from mojo.xmods.wellknown.singletons import LandscapeSingleton
+    from mojo.landscaping.wellknown import LandscapeSingleton
 
     interactive_mode = False
     if interactive is not None:

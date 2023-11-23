@@ -6,9 +6,7 @@ import copy
 from mojo.interfaces.iexcludefilter import IExcludeFilter
 from mojo.interfaces.iincludefilter import IIncludeFilter
 
-from mojo.landscaping.cluster.nodebase import NodeBase
-
-from mojo.xmods.wellknown.singletons import LandscapeSingleton
+from mojo.landscaping.wellknown import LandscapeSingleton
 
 class ConfigurationExtractor:
     """

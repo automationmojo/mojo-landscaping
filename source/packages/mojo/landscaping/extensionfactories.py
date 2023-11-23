@@ -21,7 +21,7 @@ from typing import List, Protocol, Type
 
 from mojo.landscaping.coupling.integrationcoupling import IntegrationCoupling
 
-class LandscapingExtentionPoints(Protocol):
+class LandscapingExtensionFactory(Protocol):
 
     @classmethod
     def get_landscape_type(self) -> Type:

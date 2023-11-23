@@ -27,7 +27,7 @@ from logging import getLogger
 
 from mojo.waiting import TimeoutContext
 
-from mojo.errors.exceptions import ConfigurationError, SemanticError
+from mojo.errors.exceptions import SemanticError
 
 from mojo.interfaces.isystemcontext import ISystemContext
 from mojo.xmods.aspects import AspectsCmd, DEFAULT_CMD_ASPECTS, ActionPattern, LoggingPattern
