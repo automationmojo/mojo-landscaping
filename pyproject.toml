@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "mojo-landscaping"
 description = "Automation Mojo Landscaping Package"
-version = "0.0.3"
+version = "0.0.4"
 authors = ["Myron W Walker"]
 readme = "README.rst"
 license = "LICENSE.txt"
@@ -20,7 +20,7 @@ python = ">=3.8,<4.0"
 mojo-interfaces = "^0.0.1"
 mojo-extension = "^0.0.2"
 mojo-credentials = "^0.0.1"
-mojo-xmodules = ">=1.0.0 <=1.1.0"
+mojo-xmodules = ">=1.0.2 <1.1.0"
 
 [tool.poetry.group.dev.dependencies]
 myst-parser = "^0.18.1"

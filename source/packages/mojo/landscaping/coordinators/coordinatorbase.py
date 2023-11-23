@@ -24,9 +24,10 @@ import weakref
 
 from mojo.errors.exceptions import NotOverloadedError
 
+from mojo.xmods.xthreading.lockscopes import LockedScope, UnLockedScope
+
 from mojo.landscaping.landscapeparameters import LandscapeActivationParams
 from mojo.landscaping.landscapedevice import LandscapeDevice
-from mojo.xmods.xthreading.lockscopes import LockedScope, UnLockedScope
 
 if TYPE_CHECKING:
     from mojo.landscaping.landscape import Landscape

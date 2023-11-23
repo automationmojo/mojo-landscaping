@@ -25,10 +25,11 @@ from mojo.errors.exceptions import SemanticError
 from mojo.interfaces.iexcludefilter import IExcludeFilter
 from mojo.interfaces.iincludefilter import IIncludeFilter
 
+from mojo.xmods.injection.coupling.integrationcoupling import IntegrationCouplingType
+
 from mojo.landscaping.constants import DeviceExtensionType
 from mojo.landscaping.coordinators.coordinatorbase import CoordinatorBase
 from mojo.landscaping.coupling.coordinatorcoupling import CoordinatorCoupling
-from mojo.landscaping.coupling.integrationcoupling import IntegrationCouplingType
 from mojo.landscaping.layers.landscapinglayerbase import LandscapingLayerBase
 from mojo.landscaping.layers.landscapeconfigurationlayer import LandscapeConfigurationLayer
 from mojo.landscaping.friendlyidentifier import FriendlyIdentifier

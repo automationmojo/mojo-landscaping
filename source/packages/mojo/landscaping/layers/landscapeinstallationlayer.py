@@ -22,7 +22,8 @@ from typing import Dict, TYPE_CHECKING
 
 from mojo.extension.wellknown import ConfiguredSuperFactorySingleton
 
-from mojo.landscaping.coupling.integrationcoupling import IntegrationCouplingType
+from mojo.xmods.injection.coupling.integrationcoupling import IntegrationCouplingType
+
 from mojo.landscaping.extensionfactories import LandscapingExtensionFactory
 from mojo.landscaping.layers.landscapinglayerbase import LandscapingLayerBase
 
