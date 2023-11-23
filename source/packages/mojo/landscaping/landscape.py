@@ -45,7 +45,7 @@ from mojo.landscaping.landscapedevicecluster import LandscapeDeviceCluster
 from mojo.landscaping.landscapeservice import LandscapeService
 from mojo.landscaping.friendlyidentifier import FriendlyIdentifier
 
-from mojo.landscaping.coupling.integrationcoupling import IntegrationCoupling
+from mojo.xmods.injection.coupling.integrationcoupling import IntegrationCoupling
 
 from mojo.xmods.xthreading.lockscopes import LockedScope, UnLockedScope
 from mojo.xmods.xinspect import get_caller_function_name

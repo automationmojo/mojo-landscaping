@@ -19,7 +19,7 @@ __license__ = "MIT"
 
 from typing import List, Protocol, Type
 
-from mojo.landscaping.coupling.integrationcoupling import IntegrationCoupling
+from mojo.xmods.injection.coupling.integrationcoupling import IntegrationCoupling
 
 class LandscapingExtensionFactory(Protocol):
 
