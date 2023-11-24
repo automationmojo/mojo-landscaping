@@ -21,7 +21,7 @@ from typing import List, Protocol, Type
 
 from mojo.xmods.injection.coupling.integrationcoupling import IntegrationCoupling
 
-class LandscapingExtensionFactory(Protocol):
+class LandscapingExtensionProtocol(Protocol):
 
     @classmethod
     def get_landscape_type(self) -> Type:
