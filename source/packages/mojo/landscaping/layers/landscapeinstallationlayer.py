@@ -24,7 +24,7 @@ from mojo.extension.wellknown import ConfiguredSuperFactorySingleton
 
 from mojo.xmods.injection.coupling.integrationcoupling import IntegrationCouplingType
 
-from mojo.landscaping.extensionfactories import LandscapingExtensionFactory
+from mojo.landscaping.landscapingextensionprotocol import LandscapingExtensionProtocol
 from mojo.landscaping.layers.landscapinglayerbase import LandscapingLayerBase
 
 if TYPE_CHECKING:
@@ -51,8 +51,8 @@ class LandscapeInstallationLayer(LandscapingLayerBase):
     def _load_integration_coupling_types(self):
 
         super_factory = ConfiguredSuperFactorySingleton()
-        for integration_coupling_types in super_factory.interate_override_types_for_each(
-            LandscapingExtensionFactory.get_integration_coupling_types):
+        for integration_coupling_types in super_factory.iterate_override_types_for_each(
+            LandscapingExtensionProtocol.get_integration_coupling_types):
 
             for itype in integration_coupling_types:
                 itype: IntegrationCouplingType = itype

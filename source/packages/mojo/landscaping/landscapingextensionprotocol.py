@@ -23,6 +23,8 @@ from mojo.xmods.injection.coupling.integrationcoupling import IntegrationCouplin
 
 class LandscapingExtensionProtocol(Protocol):
 
+    ext_protocol_name = "mojo-landscaping-extension-protocol"
+
     @classmethod
     def get_landscape_type(self) -> Type:
         """
