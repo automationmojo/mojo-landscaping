@@ -51,7 +51,7 @@ class NodeCoordinatorCouplingBase(CoordinatorCoupling):
     """
 
     integration_root: str = "apod"
-    integration_section: str = "devices"
+    integration_section: str = "nodes"
     integration_leaf: str = "deviceType"
     integration_class: str = SUPPORTED_INTEGRATION_CLASS
 
