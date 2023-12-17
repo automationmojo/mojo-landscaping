@@ -249,7 +249,7 @@ class LandscapeConfigurationLayer(LandscapingLayerBase):
             pod_info = self._landscape_info["apod"]
 
             for devsection in pod_info.keys():
-                for dev_config_info in pod_info[devsection]:
+                for dev_config_info in pod_info[devsection].values():
                     if "skip" in dev_config_info and dev_config_info["skip"]:
                         continue
                     dev_config_info["section"] = devsection
