@@ -247,13 +247,16 @@ class LandscapeConfigurationLayer(LandscapingLayerBase):
 
         if "apod" in self._landscape_info:
             pod_info = self._landscape_info["apod"]
-            if "devices" in pod_info:
-                for dev_config_info in pod_info["devices"]:
+
+            for devsection in pod_info.keys():
+                for dev_config_info in pod_info[devsection]:
                     if "skip" in dev_config_info and dev_config_info["skip"]:
                         continue
+                    dev_config_info["section"] = devsection
                     device_config_list.append(dev_config_info)
 
         return device_config_list
+
 
     def locked_get_power_configs(self) -> List[dict]:
         """

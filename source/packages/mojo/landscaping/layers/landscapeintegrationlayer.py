@@ -379,7 +379,8 @@ class LandscapeIntegrationLayer(LandscapingLayerBase):
 
             for dev_config_info in device_configs:
                 dev_type = dev_config_info["deviceType"]
-                dev_integ_key = f"apod:devices:deviceType:{dev_type}"
+                dev_section = dev_config_info["section"]
+                dev_integ_key = f"apod:{dev_section}:deviceType:{dev_type}"
 
                 if dev_integ_key in requested_coupling_table:
                     coord_coupling: CoordinatorCoupling = requested_coupling_table[dev_integ_key]
