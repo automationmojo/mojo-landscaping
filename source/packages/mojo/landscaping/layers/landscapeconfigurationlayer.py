@@ -46,6 +46,10 @@ from mojo.landscaping.landscapeparameters import (
 if TYPE_CHECKING:
     from mojo.landscaping.landscape import Landscape
 
+APOD_RESERVED_SECTIONS = [
+    "controller"
+]
+
 class LandscapeConfigurationLayer(LandscapingLayerBase):
     """
         The base class for all derived :class:`LandscapeDescription` objects.  The
@@ -249,11 +253,13 @@ class LandscapeConfigurationLayer(LandscapingLayerBase):
             pod_info = self._landscape_info["apod"]
 
             for devsection in pod_info.keys():
-                for dev_config_info in pod_info[devsection].values():
-                    if "skip" in dev_config_info and dev_config_info["skip"]:
-                        continue
-                    dev_config_info["section"] = devsection
-                    device_config_list.append(dev_config_info)
+                if devsection not in APOD_RESERVED_SECTIONS:
+                    section_items = pod_info[devsection]
+                    for dev_config_info in section_items:
+                        if "skip" in dev_config_info and dev_config_info["skip"]:
+                            continue
+                        dev_config_info["section"] = devsection
+                        device_config_list.append(dev_config_info)
 
         return device_config_list
 
