@@ -20,6 +20,7 @@ from typing import Dict, List, Optional, Union
 
 import inspect
 import logging
+import os
 import threading
 
 from mojo.errors.exceptions import SemanticError
@@ -204,7 +205,11 @@ class Landscape:
 
                     log_configuration_declarations = thisType.context.lookup(ContextPaths.BEHAVIORS_LOG_CONFIGURATION, True)
                     if log_configuration_declarations:
-                        log_to_directory = thisType.context.lookup(ContextPaths.OUTPUT_DIRECTORY)
+                        log_to_directory = os.path.abspath(
+                            os.path.expanduser(
+                                os.path.expandvars(thisType.context.lookup(ContextPaths.OUTPUT_DIRECTORY))
+                            )
+                        )
                         if log_to_directory is not None:
                             self._layer_configuration.record_configuration(log_to_directory)
 
