@@ -30,9 +30,10 @@ from mojo.errors.exceptions import ConfigurationError
 from mojo.collections.mergemap import MergeMap
 from mojo.collections.wellknown import ContextSingleton
 
-from mojo.config.configurationmaps import CONFIGURATION_MAPS
-
 from mojo.credentials.credentialmanager import CredentialManager
+
+from mojo.config.configurationmaps import CONFIGURATION_MAPS
+from mojo.config.wellknown import CredentialManagerSingleton
 
 from mojo.interfaces.iexcludefilter import IExcludeFilter
 from mojo.interfaces.iincludefilter import IIncludeFilter
@@ -177,7 +178,7 @@ class LandscapeConfigurationLayer(LandscapingLayerBase):
         """
             Initialize the credentials manager for the landscape object.
         """
-        self._credential_manager = CredentialManager()
+        self._credential_manager = CredentialManagerSingleton()
         return
 
     def load_landscape(self, activation_params: LandscapeActivationParams) -> Union[MergeMap, None]:
