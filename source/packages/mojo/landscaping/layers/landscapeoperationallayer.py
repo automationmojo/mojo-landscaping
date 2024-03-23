@@ -275,7 +275,7 @@ class LandscapeOperationalLayer(LandscapingLayerBase):
         candidate_clusters = None
 
         with lscape.begin_locked_landscape_scope() as locked:
-            candidate_clusters = [dev for dev in self._operational_clusters]
+            candidate_clusters = [dev for dev in self._operational_clusters.values()]
         
         selected_clusters = []
 
