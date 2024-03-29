@@ -3,6 +3,7 @@ from typing import Any, Dict, List, Optional, Union, TYPE_CHECKING
 
 import os
 
+from mojo.errors.xtraceback import format_exception
 from mojo.errors.exceptions import CheckinError, CheckoutError, SemanticError
 
 from mojo.interfaces.iexcludefilter import IExcludeFilter
@@ -365,6 +366,19 @@ class LandscapeOperationalLayer(LandscapingLayerBase):
 
                     coordinator: NodeCoordinatorBase = cgroup.coordinator
                     cluster = coordinator.create_cluster_for_devices(cname, cgroup, nodes, spares)
+
+                    try:
+                        cluster.enchance_metadata()
+                    except Exception as xcpt:
+                        errmsg_lines = [
+                            "Error while attempting to enhance the metadata for a cluster.",
+                            "EXCEPTION:"
+                        ]
+
+                        errmsg_lines.append(format_exception(xcpt))
+
+                        errmsg = os.linesep.join(errmsg_lines)
+                        raise RuntimeError(errmsg)
 
                     self._operational_clusters[cname] = cluster
         

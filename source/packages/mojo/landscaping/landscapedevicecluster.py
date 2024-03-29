@@ -53,3 +53,9 @@ class LandscapeDeviceCluster:
     @property
     def spares(self) -> Dict[str, NodeBase]:
         return self._spares
+
+    def enchance_metadata(self):
+        """
+            Hook function to allow a cluster object the opportunity to enhance its Metadata.
+        """
+        return
