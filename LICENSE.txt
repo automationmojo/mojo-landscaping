@@ -1,6 +1,12 @@
+Permission is hereby granted to the following people under the MIT License specified below:
+- Individuals
+- Organizations under 10 people
+- Non-profit Organizations
+- Qumulo Inc
+
 MIT License
 
-Copyright (c) Copyright 2020, Myron W Walker
+Copyright (c) Copyright 2023, Myron W Walker
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -19,4 +25,10 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+NOTE: If you are a profitable Startup or organization under 10 people, it is still recommended that you not abuse the license above and support this project via patreon.
+
+For all other organizations larger than 10 people, a commercial software license must be obtained.
+
+myron.walker@gmail.com
 
