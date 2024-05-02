@@ -31,4 +31,3 @@ NOTE: If you are a profitable Startup or organization under 10 people, it is sti
 For all other organizations larger than 10 people, a commercial software license must be obtained.
 
 myron.walker@gmail.com
-
