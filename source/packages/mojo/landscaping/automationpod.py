@@ -3,8 +3,10 @@
 from mojo.landscaping.wellknown import LandscapeSingleton
 
 from mojo.landscaping.landscape import Landscape
+from mojo.xmods.injection.coupling.scopecoupling import ScopeCoupling
 
-class AutomationPod:
+
+class AutomationPod(ScopeCoupling):
     """
         The :class:`AutomationPodBase` object serves as a base class for derived :class:`AutomationPodBase` objects.
     """
